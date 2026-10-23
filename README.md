@@ -30,3 +30,5 @@ npm run check
 功能依据和核对范围见 `maintenance/content-sources.md`。不将准备中入口、旧版本桥接能力、测试包或未核验下载链接当作已上线功能。产品与模型资源版权各归其权利方。
 
 网站复用控制台 logo、粉色语义配色和寒蝉全圆体；字体许可证在 `site/assets/ChillRound-LICENSE.txt`。未使用未经许可的模型图片。维护时按用户要求禁止 GUI 自动化及自动截图；页面布局仅做源码与静态检查，未做浏览器视觉验收。
+
+字体以 WOFF2 发布（保留完整字符集）；格式转换版已更名为 Utae Web Round，原始字体保留在 maintenance/fonts，许可证保持不变。重新转换可在装有 fontTools 和 Brotli 的 Windows Python 环境运行 `python scripts/font.py`，不属于每次文档构建的必要步骤。
