@@ -1,6 +1,7 @@
 [
   {
     "name": "store-header",
+    "title": "商店页头图",
     "width": 920,
     "height": 430,
     "status": "required",
@@ -11,6 +12,7 @@
   },
   {
     "name": "store-small",
+    "title": "商店小胶囊图",
     "width": 462,
     "height": 174,
     "status": "required",
@@ -21,6 +23,7 @@
   },
   {
     "name": "store-main",
+    "title": "商店主胶囊图",
     "width": 1232,
     "height": 706,
     "status": "required",
@@ -31,6 +34,7 @@
   },
   {
     "name": "store-vertical",
+    "title": "商店竖版胶囊图",
     "width": 748,
     "height": 896,
     "status": "required",
@@ -41,6 +45,7 @@
   },
   {
     "name": "library-capsule",
+    "title": "游戏库封面",
     "width": 600,
     "height": 900,
     "status": "required",
@@ -51,6 +56,7 @@
   },
   {
     "name": "library-header",
+    "title": "游戏库横幅",
     "width": 920,
     "height": 430,
     "status": "required",
@@ -61,6 +67,7 @@
   },
   {
     "name": "library-hero",
+    "title": "游戏库背景",
     "width": 3840,
     "height": 1240,
     "status": "required",
@@ -71,6 +78,7 @@
   },
   {
     "name": "library-logo",
+    "title": "游戏库透明标志",
     "width": 1280,
     "height": 300,
     "status": "required",
@@ -81,6 +89,7 @@
   },
   {
     "name": "shortcut-icon",
+    "title": "桌面快捷图标",
     "width": 512,
     "height": 512,
     "status": "required",
@@ -91,6 +100,7 @@
   },
   {
     "name": "app-icon",
+    "title": "应用图标",
     "width": 184,
     "height": 184,
     "status": "required",
@@ -101,6 +111,7 @@
   },
   {
     "name": "store-background",
+    "title": "商店页面背景",
     "width": 1438,
     "height": 810,
     "status": "optional",
@@ -111,6 +122,7 @@
   },
   {
     "name": "event-cover",
+    "title": "活动封面",
     "width": 800,
     "height": 450,
     "status": "conditional-event",
@@ -121,6 +133,7 @@
   },
   {
     "name": "event-header",
+    "title": "活动页头图",
     "width": 1920,
     "height": 622,
     "status": "conditional-event",
@@ -131,6 +144,7 @@
   },
   {
     "name": "promo-landscape",
+    "title": "横版宣传图",
     "width": 1920,
     "height": 1080,
     "status": "extra",
@@ -141,6 +155,7 @@
   },
   {
     "name": "about-intro",
+    "title": "产品介绍主视觉",
     "width": 1200,
     "height": 660,
     "status": "extra",
@@ -151,6 +166,7 @@
   },
   {
     "name": "about-tracking",
+    "title": "面捕功能介绍",
     "width": 1200,
     "height": 400,
     "status": "extra",
@@ -161,6 +177,7 @@
   },
   {
     "name": "about-models",
+    "title": "模型功能介绍",
     "width": 1200,
     "height": 400,
     "status": "extra",
@@ -171,6 +188,7 @@
   },
   {
     "name": "about-output",
+    "title": "输出功能介绍",
     "width": 1200,
     "height": 400,
     "status": "extra",

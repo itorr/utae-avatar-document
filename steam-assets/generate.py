@@ -26,6 +26,17 @@ logo64 = base64.b64encode((ROOT/'assets/logo.png').read_bytes()).decode()
 OUTLINE = False
 TEXTS = []
 INK = '#713b56'
+NAMES = {
+    'store-header':'商店页头图', 'store-small':'商店小胶囊图',
+    'store-main':'商店主胶囊图', 'store-vertical':'商店竖版胶囊图',
+    'library-capsule':'游戏库封面', 'library-header':'游戏库横幅',
+    'library-hero':'游戏库背景', 'library-logo':'游戏库透明标志',
+    'shortcut-icon':'桌面快捷图标', 'app-icon':'应用图标',
+    'store-background':'商店页面背景', 'event-cover':'活动封面',
+    'event-header':'活动页头图', 'promo-landscape':'横版宣传图',
+    'about-intro':'产品介绍主视觉', 'about-tracking':'面捕功能介绍',
+    'about-models':'模型功能介绍', 'about-output':'输出功能介绍',
+}
 
 def text(s,x,y,size,color=INK,anchor='start'):
     TEXTS.append(s)
@@ -134,7 +145,7 @@ for name,w,h,status,fn in specs:
         path=path.with_suffix('.jpg'); im.convert('RGB').save(path,quality=96,subsampling=0)
         (ROOT/folder/f'{name}.png').unlink()
     assert im.size==(w,h)
-    manifest.append(dict(name=name,width=w,height=h,status=status,source=f'svg/{name}.svg',file=str(path.relative_to(ROOT)).replace('\\','/'),alpha='straight' if name in ('library-logo','shortcut-icon') else 'opaque',sha256=hashlib.sha256(path.read_bytes()).hexdigest()))
+    manifest.append(dict(name=name,title=NAMES[name],width=w,height=h,status=status,source=f'svg/{name}.svg',file=str(path.relative_to(ROOT)).replace('\\','/'),alpha='straight' if name in ('library-logo','shortcut-icon') else 'opaque',sha256=hashlib.sha256(path.read_bytes()).hexdigest()))
     print(name,w,h,flush=True)
 
 # ICO is an additional convenience, the documented shortcut PNG is sufficient.
@@ -146,7 +157,7 @@ sheet=Image.new('RGB',(1440,((len(manifest)+2)//3)*360),'#f4edf0'); draw=ImageDr
 labelfont=ImageFont.truetype(str(FONT),20)
 for i,m in enumerate(manifest):
     x=(i%3)*480; y=(i//3)*360
-    draw.text((x+24,y+16),f"{m['name']}  {m['width']}×{m['height']}",fill=INK,font=labelfont)
+    draw.text((x+24,y+16),f"{m['title']}  {m['width']}×{m['height']}",fill=INK,font=labelfont)
     im=Image.open(ROOT/m['file']).convert('RGBA'); im.thumbnail((432,284),Image.Resampling.LANCZOS)
     sheet.paste(im,(x+24+(432-im.width)//2,y+54+(284-im.height)//2),im)
 sheet.save(ROOT/'review/contact-sheet.jpg',quality=93)
@@ -165,7 +176,7 @@ checks={'dimensions':'18/18 passed','alpha_probe_rgba':probe,'png_encoding':'str
 labels={'required':'必需静态物料','optional':'可选背景','conditional-event':'活动条件适用','extra':'介绍与宣传 · 非截图'}
 cards=[]
 for m in manifest:
-    cards.append(f'<article><img src="{m["file"]}" alt="{m["name"]}" loading="lazy"><h2>{m["name"]}</h2><p>{m["width"]} × {m["height"]} · {labels[m["status"]]}</p><nav><a href="{m["source"]}" download>SVG 源文件</a><a href="{m["file"]}" download>位图文件</a></nav></article>')
+    cards.append(f'<article><img src="{m["file"]}" alt="{m["title"]}" loading="lazy"><h2>{m["title"]}</h2><p>{m["width"]} × {m["height"]} · {labels[m["status"]]}</p><nav><a href="{m["source"]}" download>SVG 源文件</a><a href="{m["file"]}" download>位图文件</a></nav></article>')
 page='''<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>utae avatar · Steam 物料</title>
 <style>@font-face{font-family:Round;src:url(assets/ChillRoundF.ttf)}*{box-sizing:border-box}body{margin:0;background:#fff8fa;color:#713b56;font-family:Round,system-ui,sans-serif}main{max-width:1440px;margin:auto;padding:40px 24px}h1{font-size:36px}p{line-height:1.7}aside{padding:20px 24px;border-radius:20px;background:#f9dce9}a{color:inherit;text-underline-offset:4px}section{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:28px}article{padding:18px;background:#f5eaf0;border-radius:24px}article img{display:block;width:100%;height:250px;object-fit:contain}h2{font-size:20px;margin:18px 0 0;overflow-wrap:anywhere}nav{display:flex;gap:20px;flex-wrap:wrap}nav a{background:#fff8fa;border-radius:12px;padding:9px 13px;text-decoration:none}a:hover{color:#a54370}a:focus-visible{outline:3px solid #a54370;outline-offset:3px}</style>
 <main><h1>utae avatar · Steam 视觉物料</h1><p>让形象动起来。<br>18 张可编辑 SVG 与对应位图 · 规范核对于 2026-10-24</p>
