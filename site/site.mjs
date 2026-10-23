@@ -1,3 +1,16 @@
+const themes=['pink','purple','blue','green'];
+const themeInputs=[...document.querySelectorAll('input[name="theme"]')];
+const applyTheme=value=>{
+ if(!themes.includes(value))return;
+ document.documentElement.dataset.theme=value;
+ for(const input of themeInputs)input.checked=input.value===value;
+};
+try{applyTheme(localStorage.getItem('avatar-site-theme')||'pink')}catch{applyTheme('pink')}
+for(const input of themeInputs)input.addEventListener('change',()=>{
+ if(!input.checked)return;
+ applyTheme(input.value);
+ try{localStorage.setItem('avatar-site-theme',input.value)}catch{}
+});
 const search=document.querySelector('#search');
 if(search){
  const results=document.querySelector('#results');let data;
