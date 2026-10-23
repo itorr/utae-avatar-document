@@ -1,0 +1,13 @@
+{
+  "dimensions": "18/18 passed",
+  "alpha_probe_rgba": [
+    255,
+    0,
+    0,
+    128
+  ],
+  "png_encoding": "straight (unassociated) alpha",
+  "app_icon": "RGB JPEG",
+  "svg": "native text with embedded OFL subset; individual background shapes; original embedded PNG icon",
+  "screenshots": "missing; no generated artwork is a product screenshot"
+}

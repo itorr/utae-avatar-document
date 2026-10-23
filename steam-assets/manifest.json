@@ -1,0 +1,182 @@
+[
+  {
+    "name": "store-header",
+    "width": 920,
+    "height": 430,
+    "status": "required",
+    "source": "svg/store-header.svg",
+    "file": "upload/store-header.png",
+    "alpha": "opaque",
+    "sha256": "f1c372a0d9ddc8ab3b2b2209b5d73620f76e00759fc9fe723347d54814d3be12"
+  },
+  {
+    "name": "store-small",
+    "width": 462,
+    "height": 174,
+    "status": "required",
+    "source": "svg/store-small.svg",
+    "file": "upload/store-small.png",
+    "alpha": "opaque",
+    "sha256": "5f7df4a7334d02729994e251ec05c7c2fcb009635fb82b052b8cfc6fce2afdb0"
+  },
+  {
+    "name": "store-main",
+    "width": 1232,
+    "height": 706,
+    "status": "required",
+    "source": "svg/store-main.svg",
+    "file": "upload/store-main.png",
+    "alpha": "opaque",
+    "sha256": "a1519918ec1ece0b303bf177a438c9bf02dbc2d029545d36f6f83b2ca8053759"
+  },
+  {
+    "name": "store-vertical",
+    "width": 748,
+    "height": 896,
+    "status": "required",
+    "source": "svg/store-vertical.svg",
+    "file": "upload/store-vertical.png",
+    "alpha": "opaque",
+    "sha256": "bb9a7fd347e055af9c245b24548104bcb99ea86232818074ee2bcb03eed0d525"
+  },
+  {
+    "name": "library-capsule",
+    "width": 600,
+    "height": 900,
+    "status": "required",
+    "source": "svg/library-capsule.svg",
+    "file": "upload/library-capsule.png",
+    "alpha": "opaque",
+    "sha256": "b8b5c41206db6e0863c5b0c0bded1107ee5895386094eecab3062603b85059a4"
+  },
+  {
+    "name": "library-header",
+    "width": 920,
+    "height": 430,
+    "status": "required",
+    "source": "svg/library-header.svg",
+    "file": "upload/library-header.png",
+    "alpha": "opaque",
+    "sha256": "f1c372a0d9ddc8ab3b2b2209b5d73620f76e00759fc9fe723347d54814d3be12"
+  },
+  {
+    "name": "library-hero",
+    "width": 3840,
+    "height": 1240,
+    "status": "required",
+    "source": "svg/library-hero.svg",
+    "file": "upload/library-hero.png",
+    "alpha": "opaque",
+    "sha256": "06c9c64c4549b5e382672dd9eb8c37c566edebd3e821276abf53962d1c3175c7"
+  },
+  {
+    "name": "library-logo",
+    "width": 1280,
+    "height": 300,
+    "status": "required",
+    "source": "svg/library-logo.svg",
+    "file": "upload/library-logo.png",
+    "alpha": "straight",
+    "sha256": "952eb151aa0f40c0522b97f3335752a4594569f8289d05eb46f75eea9546c444"
+  },
+  {
+    "name": "shortcut-icon",
+    "width": 512,
+    "height": 512,
+    "status": "required",
+    "source": "svg/shortcut-icon.svg",
+    "file": "upload/shortcut-icon.png",
+    "alpha": "straight",
+    "sha256": "4e79c9f1234dd43163f9704395856c2c91345fda17188caba48785fc9419ccc5"
+  },
+  {
+    "name": "app-icon",
+    "width": 184,
+    "height": 184,
+    "status": "required",
+    "source": "svg/app-icon.svg",
+    "file": "upload/app-icon.jpg",
+    "alpha": "opaque",
+    "sha256": "025af3aafa6cecc6492762c07eea163072b2b4062c93b7566ba64a6e3b3a988f"
+  },
+  {
+    "name": "store-background",
+    "width": 1438,
+    "height": 810,
+    "status": "optional",
+    "source": "svg/store-background.svg",
+    "file": "upload/store-background.png",
+    "alpha": "opaque",
+    "sha256": "242365011577f35801703010c56d765d2411ee71cf26b9fad9464040d5d87385"
+  },
+  {
+    "name": "event-cover",
+    "width": 800,
+    "height": 450,
+    "status": "conditional-event",
+    "source": "svg/event-cover.svg",
+    "file": "upload/event-cover.png",
+    "alpha": "opaque",
+    "sha256": "6a363b84253748d6a7948edefaa66336865eb4eceb272208b93bce75f8c2c8d6"
+  },
+  {
+    "name": "event-header",
+    "width": 1920,
+    "height": 622,
+    "status": "conditional-event",
+    "source": "svg/event-header.svg",
+    "file": "upload/event-header.png",
+    "alpha": "opaque",
+    "sha256": "6e697ac2dd0db86f70f2af97f1b986a40c2cceb1715deec35cc41c02abda83f5"
+  },
+  {
+    "name": "promo-landscape",
+    "width": 1920,
+    "height": 1080,
+    "status": "extra",
+    "source": "svg/promo-landscape.svg",
+    "file": "extras/promo-landscape.png",
+    "alpha": "opaque",
+    "sha256": "2f11b8ee1e8f66eee9601f505b75cc0a6f3f57eb3595ebe7b4e5ae279810034f"
+  },
+  {
+    "name": "about-intro",
+    "width": 1200,
+    "height": 660,
+    "status": "extra",
+    "source": "svg/about-intro.svg",
+    "file": "extras/about-intro.png",
+    "alpha": "opaque",
+    "sha256": "6420be2f6563e9f626d738d768fb62aad48b55cb7a86c5c476247e31798aec32"
+  },
+  {
+    "name": "about-tracking",
+    "width": 1200,
+    "height": 400,
+    "status": "extra",
+    "source": "svg/about-tracking.svg",
+    "file": "extras/about-tracking.png",
+    "alpha": "opaque",
+    "sha256": "502638c8d6e29775e269c9d5b4607661f7cae864ecc80e9237da179f0e3b6b32"
+  },
+  {
+    "name": "about-models",
+    "width": 1200,
+    "height": 400,
+    "status": "extra",
+    "source": "svg/about-models.svg",
+    "file": "extras/about-models.png",
+    "alpha": "opaque",
+    "sha256": "9264d4d0591ecd21f03c02a1a711441d113b5a56d5b63fed30a4c9a7cede9213"
+  },
+  {
+    "name": "about-output",
+    "width": 1200,
+    "height": 400,
+    "status": "extra",
+    "source": "svg/about-output.svg",
+    "file": "extras/about-output.png",
+    "alpha": "opaque",
+    "sha256": "4031d690255f5cdd868a09479f89f256f6a03262ef8fa975d46cf3fc26da8e44"
+  }
+]
