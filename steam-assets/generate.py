@@ -54,45 +54,38 @@ def icon(x,y,s,angle=0):
     return f'<g id="product-icon" transform="translate({x} {y}) rotate({angle} {s/2} {s/2})"><image width="{s}" height="{s}" href="data:image/png;base64,{logo64}"/></g>'
 
 def bg(w,h,quiet=False):
-    fill='#2a202b' if quiet else 'url(#blush)'
-    parts=[f'<rect width="{w}" height="{h}" fill="{fill}"/>']
-    if quiet:
-        parts += [f'<ellipse cx="{w*.05}" cy="{h*.7}" rx="{w*.24}" ry="{h*.65}" fill="#634154" opacity=".35"/>',f'<ellipse cx="{w*.98}" cy="{h*.2}" rx="{w*.22}" ry="{h*.58}" fill="#634154" opacity=".35"/>']
-    else:
-        parts += [f'<ellipse cx="{w*.88}" cy="{h*.53}" rx="{w*.38}" ry="{h*.73}" fill="#f7c0d8" opacity=".45"/>',f'<ellipse cx="{w*.96}" cy="{h*.52}" rx="{w*.26}" ry="{h*.58}" fill="#ffe3ed"/>']
-        for x,y,r in [(.08,.12,.025),(.52,.12,.013),(.91,.87,.018),(.12,.88,.013)]:
-            parts.append(f'<circle cx="{w*x}" cy="{h*y}" r="{min(w,h)*r}" fill="#d68aa9" opacity=".35"/>')
-    return '<g id="background">'+''.join(parts)+'</g>'
+    fill='#2a202b' if quiet else '#fff1f6'
+    return f'<g id="background"><rect width="{w}" height="{h}" fill="{fill}"/></g>'
 
 def brand(x,y,size):
-    return '<g id="product-title">'+text('utae',x,y,size)+text('avatar',x,y+size*.92,size)+'</g>'
+    return '<g id="product-title" aria-label="歌映虚拟形象">'+text('歌映',x,y,size)+text('虚拟形象',x,y+size*.87,size*.62)+'</g>'
 
 def horizontal(w,h,small=False):
     s=h*(.93 if small else .94)
     available=w-s-h*.035-s*.055-w*.075-w*.035
-    title_width=sum(glyphs[cmap[ord(c)]].width for c in 'avatar')/upm
+    title_width=sum(glyphs[cmap[ord(c)]].width for c in '虚拟形象')/upm*.62
     size=min(h*.31,available/title_width)
     return bg(w,h)+brand(w*.075,h*.43,size)+icon(w-s-h*.035,(h-s)/2,s,-6 if not small else 0)
 
 def vertical(w,h):
     s=min(w*.89,h*.53)
-    return bg(w,h)+brand(w*.13,h*.19,w*.21)+icon((w-s)/2,h*.42,s,-7)
+    return bg(w,h)+brand(w*.13,h*.23,w*.25)+icon((w-s)/2,h*.42,s,-7)
 
 def hero(w,h):
-    return bg(w,h)+f'<ellipse cx="{w/2}" cy="910" rx="500" ry="90" fill="#d68aa9" opacity=".12"/>'+icon(w/2-380,140,760)
+    return bg(w,h)+icon(w/2-380,140,760)
 
 def promo(w,h,kind='promo'):
     a=bg(w,h)
     if kind=='header':
-        return a+text('utae avatar',w*.16,h*.39,64)+text('让形象动起来。',w*.16,h*.64,90)+icon(w*.66,h*.20,h*.58)
-    a+=text('utae avatar',w*.065,h*.19,h*.065)
+        return a+text('歌映虚拟形象',w*.16,h*.39,64)+text('让形象动起来。',w*.16,h*.64,90)+icon(w*.66,h*.20,h*.58)
+    a+=text('歌映虚拟形象',w*.065,h*.19,h*.065)
     a+=text('让形象',w*.065,h*.43,h*.125)+text('动起来。',w*.065,h*.60,h*.125)
     if kind=='promo':
         a+=text('超高性能的 Live2D 虚拟形象动捕工具',w*.065,h*.78,h*.035)
     return a+icon(w*.57,h*.14,h*.72,-7)
 
 def about(w,h,title,lines):
-    a=bg(w,h)+text('utae avatar',40,60,25)+text(title,40,137,45)
+    a=bg(w,h)+text('歌映虚拟形象',40,60,25)+text(title,40,137,45)
     for i,s in enumerate(lines): a+=text(s,40,192+i*34,22)
     return a+icon(w-210,h-210,185,-5)
 
@@ -104,7 +97,7 @@ specs=[
  ('library-capsule',600,900,'required',vertical),
  ('library-header',920,430,'required',lambda w,h:horizontal(w,h)),
  ('library-hero',3840,1240,'required',hero),
- ('library-logo',1280,300,'required',lambda w,h:text('utae avatar',40,225,225)),
+ ('library-logo',1280,300,'required',lambda w,h:text('歌映虚拟形象',640,220,190,anchor='middle')),
  ('shortcut-icon',512,512,'required',lambda w,h:icon(0,0,w)),
  ('app-icon',184,184,'required',lambda w,h:f'<rect width="{w}" height="{h}" fill="#ffedf5"/>'+icon(0,0,w)),
  ('store-background',1438,810,'optional',lambda w,h:bg(w,h,True)),
@@ -116,9 +109,9 @@ specs=[
  ('about-models',1200,400,'extra',lambda w,h:about(w,h,'把形象，调成喜欢的样子。',['模型库 · 表情编辑 · 动作快捷键','参数绑定与图层设置'])),
  ('about-output',1200,400,'extra',lambda w,h:about(w,h,'准备好，就出镜。',['Spout2 直播输出','PNG 图片与分层 TIFF 导出'])),
 ]
-defs='<defs><linearGradient id="blush" x2="1" y2="1"><stop stop-color="#fff8fa"/><stop offset="1" stop-color="#f9dce9"/></linearGradient></defs>'
+defs=''
 def svg(w,h,body,style=''):
-    return f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}"><title>utae avatar</title><metadata>Editable layout; original raster brand icon retained. PNG exports use straight alpha.</metadata>{style}{defs}{body}</svg>'
+    return f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}"><title>歌映虚拟形象</title><metadata>Editable layout; original raster brand icon retained. PNG exports use straight alpha.</metadata>{style}{defs}{body}</svg>'
 
 # Collect every character before subsetting the embedded font.
 for name,w,h,status,fn in specs: fn(w,h)
@@ -177,9 +170,9 @@ labels={'required':'必需静态物料','optional':'可选背景','conditional-e
 cards=[]
 for m in manifest:
     cards.append(f'<article><img src="{m["file"]}" alt="{m["title"]}" loading="lazy"><h2>{m["title"]}</h2><p>{m["width"]} × {m["height"]} · {labels[m["status"]]}</p><nav><a href="{m["source"]}" download>SVG 源文件</a><a href="{m["file"]}" download>位图文件</a></nav></article>')
-page='''<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>utae avatar · Steam 物料</title>
+page='''<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>歌映虚拟形象 · Steam 物料</title>
 <style>@font-face{font-family:Round;src:url(assets/ChillRoundF.ttf)}*{box-sizing:border-box}body{margin:0;background:#fff8fa;color:#713b56;font-family:Round,system-ui,sans-serif}main{max-width:1440px;margin:auto;padding:40px 24px}h1{font-size:36px}p{line-height:1.7}aside{padding:20px 24px;border-radius:20px;background:#f9dce9}a{color:inherit;text-underline-offset:4px}section{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:28px}article{padding:18px;background:#f5eaf0;border-radius:24px}article img{display:block;width:100%;height:250px;object-fit:contain}h2{font-size:20px;margin:18px 0 0;overflow-wrap:anywhere}nav{display:flex;gap:20px;flex-wrap:wrap}nav a{background:#fff8fa;border-radius:12px;padding:9px 13px;text-decoration:none}a:hover{color:#a54370}a:focus-visible{outline:3px solid #a54370;outline-offset:3px}</style>
-<main><h1>utae avatar · Steam 视觉物料</h1><p>让形象动起来。<br>18 张可编辑 SVG 与对应位图 · 规范核对于 2026-10-24</p>
+<main><h1>歌映虚拟形象 · Steam 视觉物料</h1><p>让形象动起来。<br>18 张可编辑 SVG 与对应位图 · 规范核对于 2026-10-24</p>
 <aside><strong>还缺至少 5 张真实产品截图，当前不能视为上架资料全部齐备。</strong><p>SVG 保留可编辑文字和背景，图标为内嵌原始 PNG。Steam 上传使用位图，介绍宣传图不能放入截图槽。未上传或发布。</p><nav><a href="README.txt">完整规范与交付说明</a><a href="manifest.json">尺寸和文件校验</a><a href="review/contact-sheet.jpg">素材总览</a><a href="review/small-capsule-proof.png">小尺寸校样</a></nav></aside>
 <section>'''+''.join(cards)+'</section></main></html>'
 (ROOT/'index.html').write_text(page,encoding='utf-8')

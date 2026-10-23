@@ -8,7 +8,7 @@
     "source": "svg/store-header.svg",
     "file": "upload/store-header.png",
     "alpha": "opaque",
-    "sha256": "f1c372a0d9ddc8ab3b2b2209b5d73620f76e00759fc9fe723347d54814d3be12"
+    "sha256": "a178a494408932412264bccd62e20e096801b899cdd7c7f0455aae53e9e8c196"
   },
   {
     "name": "store-small",
@@ -19,7 +19,7 @@
     "source": "svg/store-small.svg",
     "file": "upload/store-small.png",
     "alpha": "opaque",
-    "sha256": "5f7df4a7334d02729994e251ec05c7c2fcb009635fb82b052b8cfc6fce2afdb0"
+    "sha256": "cbc4351dcbcab41eebf2a0653aeb8e84922da71ab537f3e1d244b5d0b9e7b8f5"
   },
   {
     "name": "store-main",
@@ -30,7 +30,7 @@
     "source": "svg/store-main.svg",
     "file": "upload/store-main.png",
     "alpha": "opaque",
-    "sha256": "a1519918ec1ece0b303bf177a438c9bf02dbc2d029545d36f6f83b2ca8053759"
+    "sha256": "097a534bd13ee7c606f77c1a52fd07f8ad0f2604f79f79d1e61d3a1f52a5304e"
   },
   {
     "name": "store-vertical",
@@ -41,7 +41,7 @@
     "source": "svg/store-vertical.svg",
     "file": "upload/store-vertical.png",
     "alpha": "opaque",
-    "sha256": "bb9a7fd347e055af9c245b24548104bcb99ea86232818074ee2bcb03eed0d525"
+    "sha256": "38e0b8b887104f2058a7f5c19f23054dfb514102160138a42aa089f184c0314f"
   },
   {
     "name": "library-capsule",
@@ -52,7 +52,7 @@
     "source": "svg/library-capsule.svg",
     "file": "upload/library-capsule.png",
     "alpha": "opaque",
-    "sha256": "b8b5c41206db6e0863c5b0c0bded1107ee5895386094eecab3062603b85059a4"
+    "sha256": "60c71eeb855858054e3c3aa54baee29e3374dc0b7d442ceda22a423a1e7f4253"
   },
   {
     "name": "library-header",
@@ -63,7 +63,7 @@
     "source": "svg/library-header.svg",
     "file": "upload/library-header.png",
     "alpha": "opaque",
-    "sha256": "f1c372a0d9ddc8ab3b2b2209b5d73620f76e00759fc9fe723347d54814d3be12"
+    "sha256": "a178a494408932412264bccd62e20e096801b899cdd7c7f0455aae53e9e8c196"
   },
   {
     "name": "library-hero",
@@ -74,7 +74,7 @@
     "source": "svg/library-hero.svg",
     "file": "upload/library-hero.png",
     "alpha": "opaque",
-    "sha256": "06c9c64c4549b5e382672dd9eb8c37c566edebd3e821276abf53962d1c3175c7"
+    "sha256": "8f9a40da42721e2edd527f3e19b61aa660f86244c7fd21dc4345fddb968f98ec"
   },
   {
     "name": "library-logo",
@@ -85,7 +85,7 @@
     "source": "svg/library-logo.svg",
     "file": "upload/library-logo.png",
     "alpha": "straight",
-    "sha256": "952eb151aa0f40c0522b97f3335752a4594569f8289d05eb46f75eea9546c444"
+    "sha256": "125e21226524a1412f0bed2d5d631a5d3acd1d63a9fcff65b59f9be0badb5c2f"
   },
   {
     "name": "shortcut-icon",
@@ -118,7 +118,7 @@
     "source": "svg/store-background.svg",
     "file": "upload/store-background.png",
     "alpha": "opaque",
-    "sha256": "242365011577f35801703010c56d765d2411ee71cf26b9fad9464040d5d87385"
+    "sha256": "1776b7c47deda8dd78aec47724eafa43587d2c800fd7598be2365a01a66520fc"
   },
   {
     "name": "event-cover",
@@ -129,7 +129,7 @@
     "source": "svg/event-cover.svg",
     "file": "upload/event-cover.png",
     "alpha": "opaque",
-    "sha256": "6a363b84253748d6a7948edefaa66336865eb4eceb272208b93bce75f8c2c8d6"
+    "sha256": "11c68d44371c574c965b21071767747ef45b8aaf9ffb08eb21672b5e258e528a"
   },
   {
     "name": "event-header",
@@ -140,7 +140,7 @@
     "source": "svg/event-header.svg",
     "file": "upload/event-header.png",
     "alpha": "opaque",
-    "sha256": "6e697ac2dd0db86f70f2af97f1b986a40c2cceb1715deec35cc41c02abda83f5"
+    "sha256": "5a432a50c1cd87612c206dc3e147d5d69de6805ec4da970d936eb954fdea2b8e"
   },
   {
     "name": "promo-landscape",
@@ -151,7 +151,7 @@
     "source": "svg/promo-landscape.svg",
     "file": "extras/promo-landscape.png",
     "alpha": "opaque",
-    "sha256": "2f11b8ee1e8f66eee9601f505b75cc0a6f3f57eb3595ebe7b4e5ae279810034f"
+    "sha256": "5d990f6bb8516723cc408ba63f1ead963a06fb18b1eef91629e8c2c809bacf65"
   },
   {
     "name": "about-intro",
@@ -162,7 +162,7 @@
     "source": "svg/about-intro.svg",
     "file": "extras/about-intro.png",
     "alpha": "opaque",
-    "sha256": "6420be2f6563e9f626d738d768fb62aad48b55cb7a86c5c476247e31798aec32"
+    "sha256": "ddcff05cc025d6e733d58af853ba9c73458cca1f731e58aeed35dab0fbc564fe"
   },
   {
     "name": "about-tracking",
@@ -173,7 +173,7 @@
     "source": "svg/about-tracking.svg",
     "file": "extras/about-tracking.png",
     "alpha": "opaque",
-    "sha256": "502638c8d6e29775e269c9d5b4607661f7cae864ecc80e9237da179f0e3b6b32"
+    "sha256": "15ff52a6e1825f028a9c77468a9705238588b12042339a36176b0686b2dde8c1"
   },
   {
     "name": "about-models",
@@ -184,7 +184,7 @@
     "source": "svg/about-models.svg",
     "file": "extras/about-models.png",
     "alpha": "opaque",
-    "sha256": "9264d4d0591ecd21f03c02a1a711441d113b5a56d5b63fed30a4c9a7cede9213"
+    "sha256": "e8ee6feac0aa73d712bef65d7e200235e515a03f5d8445013acdd177357a1858"
   },
   {
     "name": "about-output",
@@ -195,6 +195,6 @@
     "source": "svg/about-output.svg",
     "file": "extras/about-output.png",
     "alpha": "opaque",
-    "sha256": "4031d690255f5cdd868a09479f89f256f6a03262ef8fa975d46cf3fc26da8e44"
+    "sha256": "4c488a7f23de3e99c21ca6e03339618757bc746de1d4c9294e923eca4e6d88f3"
   }
 ]
