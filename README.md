@@ -1,7 +1,7 @@
 # utae avatar 官网与说明书
 
-官网：https://avatar.utae.cn/  
-说明书：https://avatar.utae.cn/docs/
+官网：https://edo.utae.cn/  
+说明书：https://edo.utae.cn/docs/
 
 独立主仓库：`D:\claude\utae-avatar-document`。不修改桌面控制台源码。
 
@@ -21,7 +21,7 @@ npm run check
 
 ## 部署
 
-使用独立 GitHub 仓库的 Pages 工作流。`main` 更新后自动构建、验证并部署 `dist/`，入口固定为 `/` 与 `/docs/`。GitHub Pages 自定义域名设为 `avatar.utae.cn`，DNS CNAME 指向 `itorr.github.io`，证书就绪后强制 HTTPS。
+使用独立 GitHub 仓库的 Pages 工作流。`main` 更新后自动构建、验证并部署 `dist/`，入口固定为 `/` 与 `/docs/`。GitHub Pages 自定义域名设为 `edo.utae.cn`，DNS CNAME 指向 `itorr.github.io`，证书就绪后强制 HTTPS。
 
 未获明确发布要求时只提交，不推送。本次初建的推送用于已授权的官网发布。
 

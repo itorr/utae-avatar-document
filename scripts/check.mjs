@@ -5,5 +5,5 @@ async function visit(dir){for(const e of await readdir(dir,{withFileTypes:true})
 await visit(root);
 const css=await readFile('site/site.css','utf8');if(/border-(left|right|top|bottom)\s*:/.test(css))throw Error('禁止单边装饰线');
 const index=JSON.parse(await readFile('dist/assets/search.json','utf8'));if(index.length!==10)throw Error('搜索索引不完整');
-if((await readFile('dist/CNAME','utf8')).trim()!=='avatar.utae.cn')throw Error('域名不匹配');
+if((await readFile('dist/CNAME','utf8')).trim()!=='edo.utae.cn')throw Error('域名不匹配');
 console.log(`已验证 ${count} 个 HTML 页面、本地链接、资源、10 篇搜索索引和域名。`);
