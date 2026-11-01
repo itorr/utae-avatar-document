@@ -1,4 +1,4 @@
-# utae avatar API
+# 绘动 edo API
 
 本文对应 API v2，面向歌映直播、礼物互动和其他本机插件。
 
