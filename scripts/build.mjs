@@ -26,6 +26,8 @@ for(const [id,title] of pages){
 }
 await writeFile('dist/assets/search.json',JSON.stringify(search));
 await writeFile('dist/index.html',shell('让形象动起来。','/',await readFile('site/home.html','utf8')));
+await mkdir('dist/buy',{recursive:true});
+await writeFile('dist/buy/index.html',shell('绘动 Windows 版','/buy/','<main id="main" class="article error"><h1>绘动 Windows 版</h1><p>官网购买暂未开放。</p><a class="cta" href="/docs/">查看使用说明</a></main>'));
 await writeFile('dist/404.html',shell('没有找到这一页','/404.html','<main id="main" class="article error"><p class="eyebrow">404</p><h1>这一页走丢了</h1><p>回到说明书，继续找到你需要的内容。</p><a class="cta" href="/docs/">打开说明书 →</a></main>'));
 await writeFile('dist/CNAME','edo.utae.cn\n');await writeFile('dist/.nojekyll','');
 await writeFile('dist/robots.txt',`User-agent: *\nAllow: /\nSitemap: ${origin}/sitemap.xml\n`);
